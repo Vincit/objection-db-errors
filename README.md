@@ -46,7 +46,7 @@ async function something() {
   await Person.query().insert({id: 1});
 
   try {
-    // Try to insert a model with an existing primary key.x
+    // Try to insert a model with an existing primary key.
     await Person.query().insert({id: 1});
   } catch (err) {
     console.log(err instanceof UniqueViolationError); // true
