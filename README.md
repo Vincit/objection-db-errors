@@ -8,6 +8,9 @@ manageable errors.
 Every error class found in `require('db-errors')` can also be found in `require('objection-db-errors')`. See
 [db-errors](https://github.com/Vincit/db-errors) for detailed documentation.
 
+Error handling is something that should not need a plugin. The goal is to eventually merge this into objection core if
+people find this plugin useful.
+
 ## Example usage
 
 ```js
