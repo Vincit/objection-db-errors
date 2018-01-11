@@ -1,6 +1,6 @@
 {
   "name": "objection-db-errors",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "db-errors plugin for objection.js",
   "main": "index.js",
   "scripts": {
@@ -9,6 +9,11 @@
   "peerDependencies": {
     "objection": ">= 0.9.1"
   },
+  "files": [
+    "README.md",
+    "LICENSE",
+    "index.js"
+  ],
   "author": "Sami Koskimäki",
   "license": "MIT",
   "devDependencies": {
