@@ -37,7 +37,7 @@ describe('tests', () => {
   });
 
   it('should have DbErrors alias for the DBErrors function for legacy reasons', () => {
-    expect(DbErrors).to.equal(DBErrors)
+    expect(DbErrors).to.equal(DBErrors);
   })
 
   it('should map errors', done => {
