@@ -1,7 +1,6 @@
 'use strict';
 
-const DbErrors = require('./').DbErrors;
-const UniqueViolationError = require('./').UniqueViolationError;
+const { DbErrors, DBErrors, UniqueViolationError } = require('./');
 const expect = require('chai').expect;
 const Model = require('objection').Model;
 const Knex = require('knex');
@@ -37,8 +36,12 @@ describe('tests', () => {
     return knex('Person').delete();
   });
 
+  it('should have DbErrors alias for the DBErrors function for legacy reasons', () => {
+    expect(DbErrors).to.equal(DBErrors)
+  })
+
   it('should map errors', done => {
-    class Person extends DbErrors(Model) {
+    class Person extends DBErrors(Model) {
       static get tableName() {
         return this.name;
       }

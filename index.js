@@ -2,7 +2,7 @@
 
 const dbErrors = require('db-errors');
 
-const DbErrors = Model => {
+const DBErrors = Model => {
   return class extends Model {
     static query() {
       return super.query.apply(this, arguments).onError(err => {
@@ -16,4 +16,6 @@ Object.keys(dbErrors).forEach(key => {
   module.exports[key] = dbErrors[key];
 });
 
-module.exports.DbErrors = DbErrors;
+module.exports.DBErrors = DBErrors;
+// DEPRECATED: Use DBErrors instead
+module.exports.DbErrors = DBErrors;

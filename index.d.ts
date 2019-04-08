@@ -10,6 +10,8 @@ import {
 } from 'db-errors'
 import { Model } from 'objection'
 
+export function DBErrors<M extends typeof Model>(modelClass: M): M
+// DEPRECATED: Use DBErrors instead.
 export function DbErrors<M extends typeof Model>(modelClass: M): M
 
 export {
